@@ -1,6 +1,7 @@
+// Write a function that switches two variables using the xor operator
+
 #include <iostream>
 #include <utility>
-
 
 std::pair<int, int> xor_swap(int a, int b) {
     a = a ^ b; // 0 0 -> 0 | 0 1 -> 1 | 1 0 -> 1 | 1 1 -> 0
@@ -19,6 +20,7 @@ int main() {
     std::cout << pair_to_string(xor_swap(5, 3)) << '\n'; // (3, 5)
     std::cout << pair_to_string(xor_swap(3, 5)) << '\n'; // (5, 3)
     std::cout << pair_to_string(xor_swap(12345, 54321)) << '\n'; // (54321, 12345)
-    std::cout << pair_to_string(xor_swap(4343, 3434)) << '\n'; // (3434, 4343) 
+    std::cout << pair_to_string(xor_swap(4343, 3434)) << '\n'; // (3434, 4343)
+
     return 0;
 }
