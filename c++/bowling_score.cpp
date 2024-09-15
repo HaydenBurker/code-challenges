@@ -3,18 +3,18 @@
 #include <iostream>
 #include <vector>
 
-int bowling_score(std::vector<int> score_card) {
+int bowling_score(std::vector<int> scorecard) {
     int score = 0, card_idx = 0;
 
     for(int i = 1; i <= 10; i++) {
-        int first = score_card[card_idx++];
+        int first = scorecard[card_idx++];
         if (first == 10) {
-            score += first + score_card[card_idx] + score_card[card_idx + 1];
+            score += first + scorecard[card_idx] + scorecard[card_idx + 1];
             continue;
         }
 
-        int second = score_card[card_idx++];
-        if (first + second == 10) score += score_card[card_idx];
+        int second = scorecard[card_idx++];
+        if (first + second == 10) score += scorecard[card_idx];
 
         score += first + second;
     }
