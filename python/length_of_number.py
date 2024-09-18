@@ -1,3 +1,5 @@
+# Create a function that takes in a number and returns its length
+
 def length_of_number(num):
     return len(str(num))
 
