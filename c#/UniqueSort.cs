@@ -1,3 +1,5 @@
+// Create a function that takes an array of integers and returns a new array of integers that are sorted with no duplicates
+
 using System;
 using System.Collections.Generic;
 
