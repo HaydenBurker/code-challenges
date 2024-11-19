@@ -7,7 +7,7 @@ public class Program
 	public static String Stutter(String word)
 	{
 		String stutterPhraise = $"{word[0]}{word[1]}";
-		return $"{stutterPhraise}... {stutterPhraise}... {word}";
+		return $"{stutterPhraise}... {stutterPhraise}... {word}!";
 	}
 
 	public static void Main()
