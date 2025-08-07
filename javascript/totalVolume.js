@@ -6,4 +6,5 @@ function totalVolume(...boxes) {
 
 console.log(totalVolume([3, 4, 5])); // 60
 console.log(totalVolume([1, 1, 1])); // 1
-console.log(totalVolume());
+console.log(totalVolume()); // 0
+console.log(totalVolume([2, 5, 2], [1, 2, 7], [4, 1, 2])); // 42
