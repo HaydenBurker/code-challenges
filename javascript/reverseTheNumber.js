@@ -1,18 +1,20 @@
 // Create a function that takes an integer and reverses it
 
 function reverseNumber(num) {
-    let firstDigit = 0;
-    let lastDigit = Math.floor(Math.log10(num));
+  let firstDigit = 0;
+  let lastDigit = Math.floor(Math.log10(num));
 
-    while (firstDigit < lastDigit) {
-        let num1 = Math.pow(10, firstDigit++);
-        let num2 = Math.pow(10, lastDigit--);
+  while (firstDigit < lastDigit) {
+    let num1 = Math.pow(10, firstDigit++);
+    let num2 = Math.pow(10, lastDigit--);
 
-        let diff = Math.floor(num % (num1 * 10) / num1) - Math.floor(num % (num2 * 10) / num2);
-        num = num - diff * num1 + diff * num2;
-    }
+    let diff =
+      Math.floor((num % (num1 * 10)) / num1) -
+      Math.floor((num % (num2 * 10)) / num2);
+    num = num - diff * num1 + diff * num2;
+  }
 
-    return num;
+  return num;
 }
 
 console.log(reverseNumber(123)); // 321

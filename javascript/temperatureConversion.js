@@ -1,10 +1,10 @@
 // Write a function that takes in a temperature in farenheit and converts it to celcius and kelvin
 
 function temperatureConversion(f) {
-    const c = 5 * (f - 32) / 9;
-    const k = c + 273.15;
-    if (k < 0) return "too cold";
-    return [parseFloat(c.toFixed(2)), parseFloat(k.toFixed(2))];
+  const c = (5 * (f - 32)) / 9;
+  const k = c + 273.15;
+  if (k < 0) return "too cold";
+  return [parseFloat(c.toFixed(2)), parseFloat(k.toFixed(2))];
 }
 
 console.log(temperatureConversion(98.6)); // [37, 310.15]

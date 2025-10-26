@@ -2,13 +2,19 @@
 // Create a second function that converts a roman numeral between I and MMMCMXCIX into an integer
 
 function intToRoman(num) {
-    const letters = [
-        ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"],
-        ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"],
-        ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"],
-        ["", "M", "MM", "MMM"]
-    ];
-    return num.toString().split("").reverse().map((s, i) => letters[i][parseInt(s)]).reverse().join("");
+  const letters = [
+    ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"],
+    ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"],
+    ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"],
+    ["", "M", "MM", "MMM"],
+  ];
+  return num
+    .toString()
+    .split("")
+    .reverse()
+    .map((s, i) => letters[i][parseInt(s)])
+    .reverse()
+    .join("");
 }
 
 console.log(intToRoman(1));
@@ -18,11 +24,19 @@ console.log(intToRoman(444));
 console.log(intToRoman(3765));
 console.log(intToRoman(3));
 console.log(intToRoman(34));
-console.log(intToRoman(1888))
+console.log(intToRoman(1888));
 
 function romanToInt(roman) {
-    const numbers = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000};
-    return roman.split("").reduce((sum, l, i) => sum += ((roman[i + 1] && numbers[roman[i + 1]] > numbers[l]) ? -1 : 1) * numbers[l], 0);
+  const numbers = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
+  return roman
+    .split("")
+    .reduce(
+      (sum, l, i) =>
+        (sum +=
+          (roman[i + 1] && numbers[roman[i + 1]] > numbers[l] ? -1 : 1) *
+          numbers[l]),
+      0
+    );
 }
 
 console.log(romanToInt("I"));
@@ -33,12 +47,13 @@ console.log(romanToInt("MMMDCCLXV"));
 console.log(romanToInt("III"));
 console.log(romanToInt("XXXIV"));
 
-
 // Create a function that checks if a roman numeral is valid
 
 function isValidRoman(roman) {
-    roman = roman.toUpperCase();
-    return Array.from({length: 3999}).map((_, i) => intToRoman(i + 1)).some(r => r === roman);
+  roman = roman.toUpperCase();
+  return Array.from({ length: 3999 })
+    .map((_, i) => intToRoman(i + 1))
+    .some((r) => r === roman);
 }
 
 console.log(isValidRoman("Hello")); // false

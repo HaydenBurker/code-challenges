@@ -1,11 +1,13 @@
 // Create a function that takes a list of integers and returns the amount of integers which are of equal value.
 
 function equalValues(nums) {
-    const count = {}
-    for (const num of nums) {
-        count[[num]] = count[[num]] ? count[[num]] + 1: 1;
-    }
-    return Object.values(count).filter(num => num > 1).reduce((sum, num) => sum + num, 0);
+  const count = {};
+  for (const num of nums) {
+    count[[num]] = count[[num]] ? count[[num]] + 1 : 1;
+  }
+  return Object.values(count)
+    .filter((num) => num > 1)
+    .reduce((sum, num) => sum + num, 0);
 }
 
 console.log(equalValues([1, 2, 2])); // 2

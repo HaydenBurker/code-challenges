@@ -1,7 +1,7 @@
 // Write a function that mimics the right shift operator and returns the result from the two given integers.
 
 function shiftToRight(num, shift) {
-    return shift === 0 ? num : shiftToRight(Math.floor(num / 2), shift - 1)
+  return shift === 0 ? num : shiftToRight(Math.floor(num / 2), shift - 1);
 }
 
 console.log(shiftToRight(88, 3)); // 11

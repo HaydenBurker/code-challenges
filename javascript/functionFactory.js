@@ -1,9 +1,9 @@
 // Create a function that takes a number n and returns a function which adds n to the number passed to it.
 
 function makeAddFunction(n) {
-    return function(n2) {
-        return n + n2;
-    }
+  return function (n2) {
+    return n + n2;
+  };
 }
 
 const addFive = makeAddFunction(5);
