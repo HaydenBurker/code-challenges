@@ -1,4 +1,4 @@
-# Create a function that takes a binary number and converts it to an integer
+# Create a function that takes a binary number represented as a list of 0's and 1's and converts it to an integer
 
 def binary_to_decimal(binary):
     decimal = 0
